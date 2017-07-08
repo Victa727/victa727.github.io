@@ -67,10 +67,6 @@ hr.star-primary:after {
 .img-centered {
   margin: 0 auto; }
 
-.img-circle {
-  border-radius: 50%;
-  }
-
 section {
   padding: 100px 0; }
   section h2 {
@@ -168,7 +164,6 @@ header.masthead {
     padding-bottom: 50px; }
   header.masthead img {
     display: block;
-    border-radius: 50%;
     margin: 0 auto 20px; }
   header.masthead .intro-text .name {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
