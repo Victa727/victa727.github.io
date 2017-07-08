@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var livereload = require('gulp-livereload');
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
@@ -25,6 +26,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+        .pipe(livereload())
 });
 
 // Minify compiled CSS
@@ -36,6 +38,7 @@ gulp.task('minify-css', ['sass'], function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+        .pipe(livereload())
 });
 
 // Minify custom JS
@@ -48,6 +51,7 @@ gulp.task('minify-js', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+        .pipe(livereload())
 });
 
 // Copy vendor files from /node_modules into /vendor
@@ -90,6 +94,7 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
+      livereload.listen();
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
