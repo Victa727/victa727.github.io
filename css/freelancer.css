@@ -9,6 +9,7 @@ body {
 }
 p {
   font-size: 20px;
+  letter-spacing: 0.25;
 }
 p.small {
   font-size: 16px;
@@ -173,8 +174,10 @@ header .intro-text .skills {
     font-size: 1.5em;
   }
 }
+
+/*-------portfolio----------*/
 section {
-  padding: 100px 0;
+  padding: 25px 0;
 }
 section h2 {
   margin: 0;
@@ -221,7 +224,7 @@ section.success {
   height: 20px;
   font-size: 20px;
   text-align: center;
-  top: 50%;
+  top: 45%;
   margin-top: -12px;
   color: white;
 }
